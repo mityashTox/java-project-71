@@ -1,6 +1,7 @@
 plugins {
     id "java"
     id "application"
+    id 'checkstyle'
 }
 
 group = 'hexlet.code'
@@ -11,7 +12,7 @@ repositories {
 }
 
 compileJava {
-    options.release = 17
+    options.release = 20
 }
 
 application {
@@ -28,4 +29,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+checkstyle {
+    toolVersion '9.2.1'
 }
