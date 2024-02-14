@@ -9,7 +9,7 @@ class DifferTest {
     void fileNotExistTest() {
         String testFilePath1 = "src/test/resources/files/file0.json";
         String testFilePath2 = "src/test/resources/files/file2.json";
-        String expected = "File 'src/test/resources/files/file0.json' does not exist, or cannot be reading";
+        String expected = "File 'src/test/resources/files/file0.json' cannot be reading";
         assertThat(Differ.generate(testFilePath1, testFilePath2, "stylish")).isEqualTo(expected);
     }
 
