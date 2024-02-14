@@ -35,10 +35,11 @@ public class Utils {
     }
 
     public static String useForm(String format, Map<String, Object> mapFile1, Map<String, Object> mapFile2) {
-        Map<String, Format> forms = new HashMap<>();
-        forms.put("stylish", new Stylish());
-        forms.put("plain", new Plain());
-        forms.put("json", new Json());
+        Map<String, Format> forms = Map.of(
+                "stylish", new Stylish(),
+                "plain", new Plain(),
+                "json", new Json()
+        );
         return forms.get(format).construct(mapFile1, mapFile2);
     }
 }
