@@ -10,9 +10,11 @@ public class Plain implements Format {
     public final String buildString(String status, String key, Object lastValue, Object value) {
         StringBuilder sb = new StringBuilder();
         switch (status) {
-            case "changed" -> sb.append("Property '").append(key).append("' was updated. From ")
+            case "changed" -> {
+                sb.append("Property '").append(key).append("' was updated. From ")
                         .append(transformToString(lastValue)).append(" to ").append(transformToString(value))
                         .append("\n");
+            }
             case "unchanged" -> {
             }
             case "added" -> sb.append("Property '").append(key).append("' was added with value: ")
