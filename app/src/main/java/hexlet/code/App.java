@@ -49,7 +49,7 @@ public class App implements Callable {
     @Override
     public Object call() throws Exception {
         if (format.isEmpty()) {
-            System.out.println(Differ.generate(filePath1, filePath2, "stylish"));
+            System.out.println(Differ.generate(filePath1, filePath2));
         } else {
             System.out.println(Differ.generate(filePath1, filePath2, format));
         }

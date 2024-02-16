@@ -17,4 +17,7 @@ public class Differ {
         return Utils.useForm(format, mapFile1, mapFile2);
     }
 
+    public static String generate(String filepath1, String filepath2) {
+        return generate( filepath1, filepath2, "stylish");
+    }
 }
